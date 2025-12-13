@@ -32,13 +32,13 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a <span className="text-foreground font-medium">Digital Marketing</span> and <span className="text-foreground font-medium">Corporate Communications</span> professional who also works as a Virtual Assistant. I support brands by managing their online presence, organizing operations, and improving communication efficiency.
+                I am a <span className="text-foreground font-medium">Digital Marketing and Communications Specialist</span> and a dedicated <span className="text-foreground font-medium">Virtual Assistant</span>. I combine strategic marketing with hands-on support, creating campaigns that generate leads and engagement while keeping businesses and individuals organized and running efficiently.
               </p>
               <p>
-                With strong experience in social media management, caption writing, content development, and campaign coordination, I bring a strategic approach to every project. As a Virtual Assistant, I'm skilled in managing schedules, emails, itineraries, notes, and administrative tasks.
+                With strong experience in social media management, copywriting, content development, media buying, metric analysis, and campaign coordination, I bring a strategic approach to every project.
               </p>
               <p>
-                I combine creativity with structure to support brands and executives—whether it's crafting the perfect social media campaign or ensuring your inbox is organized and your meetings run smoothly.
+                As a Virtual Assistant, I provide dependable support like managing schedules, emails, itineraries, and documentation. I combine creativity with structure to support brands and individuals.
               </p>
             </div>
           </div>

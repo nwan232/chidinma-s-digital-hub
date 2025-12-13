@@ -3,8 +3,6 @@ import {
   PenTool, 
   Calendar, 
   BarChart3, 
-  MessageCircle, 
-  Palette,
   Mail,
   LineChart,
   Clock,
@@ -14,7 +12,7 @@ import {
   Search,
   Heart,
   CheckSquare,
-  Bell
+  Users
 } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -25,14 +23,14 @@ const ServicesSection = () => {
       color: 'bg-sage-light',
       iconColor: 'text-primary',
       items: [
-        { icon: Megaphone, label: 'Social media management' },
-        { icon: PenTool, label: 'Caption writing and content creation' },
-        { icon: Calendar, label: 'Content scheduling and planning' },
-        { icon: BarChart3, label: 'Campaign support and tracking' },
-        { icon: MessageCircle, label: 'Audience engagement' },
-        { icon: Palette, label: 'Basic graphic design using Canva' },
-        { icon: Mail, label: 'Email marketing support' },
-        { icon: LineChart, label: 'Reporting and analytics interpretation' },
+        { icon: Megaphone, label: 'Social Media Management' },
+        { icon: PenTool, label: 'Copywriting' },
+        { icon: FileText, label: 'Drafting Content Strategy' },
+        { icon: Calendar, label: 'Content Scheduling and Planning' },
+        { icon: BarChart3, label: 'Campaign Support and Tracking' },
+        { icon: Mail, label: 'Email Marketing' },
+        { icon: Users, label: 'Influencer Marketing' },
+        { icon: LineChart, label: 'Analytics and Tracking' },
       ],
     },
     {
