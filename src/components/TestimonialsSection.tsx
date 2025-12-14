@@ -3,22 +3,10 @@ import { Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "Chidinma transformed our social media presence. Her content strategy increased our engagement by 150% in just three months.",
-      author: "Sarah Johnson",
-      role: "CEO, Bloom Beauty",
-      avatar: "SJ",
-    },
-    {
-      quote: "As a busy entrepreneur, having Chidinma as my VA has been a game-changer. She keeps my schedule organized and my inbox manageable.",
-      author: "Michael Adeyemi",
-      role: "Founder, TechStart Nigeria",
-      avatar: "MA",
-    },
-    {
-      quote: "Professional, creative, and always delivers on time. Chidinma is the perfect partner for any brand looking to grow online.",
-      author: "Jennifer Okafor",
-      role: "Marketing Director, GreenLeaf Co.",
-      avatar: "JO",
+      quote: "Chidinma is a highly reliable and efficient professional. In her role as Executive Assistant, she demonstrated strong organization, attention to detail, and a high level of discretion. Her loyalty, professionalism, and ability to manage responsibilities effectively made a positive impact on daily operations.",
+      author: "Hon. Maruf Taiwo Hassan",
+      role: "Senior Special Assistant (SSA) on Public Health, Governor of Osun State",
+      avatar: "MH",
     },
   ];
 
