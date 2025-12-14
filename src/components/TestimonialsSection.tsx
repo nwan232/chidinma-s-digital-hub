@@ -23,36 +23,25 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="card-elevated relative hover-lift"
-            >
-              {/* Quote icon */}
-              <div className="absolute -top-4 left-8">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <Quote className="w-6 h-6 text-primary-foreground" />
-                </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="relative">
+            {/* Large decorative quote */}
+            <Quote className="w-16 h-16 text-primary/20 mx-auto mb-8" />
+            
+            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed font-display italic mb-10">
+              "{testimonials[0].quote}"
+            </blockquote>
+
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center">
+                <span className="font-semibold text-primary text-xl">{testimonials[0].avatar}</span>
               </div>
-
-              <div className="pt-8 md:flex md:items-center md:gap-8">
-                <p className="text-foreground text-lg leading-relaxed mb-6 md:mb-0 md:flex-1 italic">
-                  "{testimonial.quote}"
-                </p>
-
-                <div className="flex items-center gap-4 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-border md:pl-8 md:min-w-[280px]">
-                  <div className="w-14 h-14 bg-sage-light rounded-full flex items-center justify-center">
-                    <span className="font-semibold text-primary text-lg">{testimonial.avatar}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
+              <div>
+                <p className="font-semibold text-foreground text-lg">{testimonials[0].author}</p>
+                <p className="text-muted-foreground">{testimonials[0].role}</p>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
