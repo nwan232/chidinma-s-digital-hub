@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -31,22 +31,22 @@ const TestimonialsSection = () => {
             >
               {/* Quote icon */}
               <div className="absolute -top-4 left-8">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <Quote className="w-5 h-5 text-primary-foreground" />
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Quote className="w-6 h-6 text-primary-foreground" />
                 </div>
               </div>
 
-              <div className="pt-6">
-                <p className="text-foreground leading-relaxed mb-6 italic">
+              <div className="pt-8 md:flex md:items-center md:gap-8">
+                <p className="text-foreground text-lg leading-relaxed mb-6 md:mb-0 md:flex-1 italic">
                   "{testimonial.quote}"
                 </p>
 
-                <div className="flex items-center gap-4 pt-4 border-t border-border">
-                  <div className="w-12 h-12 bg-sage-light rounded-full flex items-center justify-center">
-                    <span className="font-medium text-primary">{testimonial.avatar}</span>
+                <div className="flex items-center gap-4 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-border md:pl-8 md:min-w-[280px]">
+                  <div className="w-14 h-14 bg-sage-light rounded-full flex items-center justify-center">
+                    <span className="font-semibold text-primary text-lg">{testimonial.avatar}</span>
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">{testimonial.author}</p>
+                    <p className="font-semibold text-foreground">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
