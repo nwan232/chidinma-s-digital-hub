@@ -1,4 +1,4 @@
-import { Instagram, Palette, BarChart, FileText, MessageSquare } from 'lucide-react';
+import { Linkedin, Palette, BarChart, FileText, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
 
@@ -8,7 +8,7 @@ const PortfolioSection = () => {
       name: 'Social Media Captions',
       category: 'Content Creation',
       description: 'Engaging captions that drive interaction and build community across platforms like Instagram, LinkedIn, and Facebook.',
-      Icon: Instagram,
+      Icon: Linkedin,
       href: '#contact',
       cta: 'View Samples',
       className: 'lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3',
