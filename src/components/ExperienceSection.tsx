@@ -23,7 +23,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-cream">
+    <section id="experience" className="section-padding bg-transparent">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">My Journey</p>
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
                   </div>
 
                   {/* Content card */}
-                  <div className="flex-1 card-elevated p-6 lg:p-8 hover-lift">
+                  <div className="flex-1 bg-card/80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl shadow-sm border border-border hover-lift">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                       <h3 className="font-display text-xl font-semibold text-foreground">
                         {exp.role}

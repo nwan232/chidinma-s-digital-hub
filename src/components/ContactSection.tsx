@@ -44,7 +44,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-cream">
+    <section id="contact" className="section-padding bg-cream/50 backdrop-blur-sm">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">Get In Touch</p>
@@ -58,7 +58,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Contact Form */}
-          <div className="card-elevated p-8 lg:p-10">
+          <div className="bg-card/90 backdrop-blur-sm p-8 lg:p-10 rounded-2xl shadow-sm border border-border">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -168,7 +168,7 @@ const ContactSection = () => {
                     <a
                       key={link.label}
                       href={link.href}
-                      className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all hover:-translate-y-1"
+                      className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all hover:-translate-y-1"
                       aria-label={link.label}
                     >
                       <link.icon size={20} />

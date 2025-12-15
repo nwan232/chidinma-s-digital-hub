@@ -52,7 +52,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-cream">
+    <section id="services" className="section-padding bg-cream/50 backdrop-blur-sm">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">What I Do</p>
@@ -68,7 +68,7 @@ const ServicesSection = () => {
           {services.map((service, serviceIndex) => (
             <div
               key={service.title}
-              className="card-elevated p-8 lg:p-10"
+              className="bg-card/80 backdrop-blur-sm p-8 lg:p-10 rounded-2xl shadow-sm border border-border"
             >
               <div className={`inline-flex items-center justify-center w-14 h-14 ${service.color} rounded-2xl mb-6`}>
                 {serviceIndex === 0 ? (

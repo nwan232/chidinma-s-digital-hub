@@ -55,7 +55,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-cream-dark">
+    <section id="skills" className="section-padding bg-transparent">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">My Expertise</p>
@@ -70,7 +70,7 @@ const SkillsSection = () => {
         {/* Skills Categories */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {skillCategories.map((category) => (
-            <div key={category.title} className="card-elevated p-8 lg:p-10">
+            <div key={category.title} className="bg-card/80 backdrop-blur-sm p-8 lg:p-10 rounded-2xl shadow-sm border border-border">
               <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-2xl mb-6`}>
                 <category.icon className={`w-7 h-7 ${category.iconColor}`} />
               </div>
@@ -105,7 +105,7 @@ const SkillsSection = () => {
           {tools.map((tool, index) => (
             <div
               key={tool.name}
-              className="group relative bg-card px-6 py-4 rounded-full border border-border hover:border-primary hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-default"
+              className="group relative bg-card/80 backdrop-blur-sm px-6 py-4 rounded-full border border-border hover:border-primary hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-default"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <span className="font-medium text-foreground">{tool.name}</span>

@@ -46,7 +46,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="section-padding bg-cream">
+    <section id="portfolio" className="section-padding bg-cream/50 backdrop-blur-sm">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">My Work</p>
@@ -62,7 +62,7 @@ const PortfolioSection = () => {
           {portfolioItems.map((item, index) => (
             <div
               key={item.title}
-              className="group card-elevated overflow-hidden hover-lift cursor-pointer"
+              className="group bg-card/90 backdrop-blur-sm rounded-2xl shadow-sm border border-border overflow-hidden hover-lift cursor-pointer"
             >
               {/* Preview Area */}
               <div className={`${item.color} h-48 flex items-center justify-center relative overflow-hidden`}>

@@ -20,7 +20,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-cream-dark">
+    <section id="about" className="section-padding bg-cream/50 backdrop-blur-sm">
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
@@ -48,7 +48,7 @@ const AboutSection = () => {
             {highlights.map((item, index) => (
               <div
                 key={item.title}
-                className="card-elevated flex items-start gap-5 hover-lift"
+                className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-border flex items-start gap-5 hover-lift"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-sage-light rounded-xl flex items-center justify-center">

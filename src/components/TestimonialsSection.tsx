@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="section-padding bg-cream-dark">
+    <section id="testimonials" className="section-padding bg-transparent">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-3">Testimonials</p>
@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
-          <div className="relative">
+          <div className="relative bg-card/80 backdrop-blur-sm p-8 lg:p-12 rounded-2xl shadow-sm border border-border">
             {/* Large decorative quote */}
             <Quote className="w-16 h-16 text-primary/20 mx-auto mb-8" />
             
