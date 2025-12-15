@@ -8,14 +8,14 @@ import PortfolioSection from '@/components/PortfolioSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import WavesBackground from '@/components/ui/waves-background';
+import { Waves } from '@/components/ui/waves-background';
 
 const Index = () => {
   return (
     <div className="relative min-h-screen">
       {/* Fixed wave background - always visible */}
       <div className="fixed inset-0 z-0">
-        <WavesBackground
+        <Waves
           lineColor="rgba(107, 142, 128, 0.12)"
           backgroundColor="hsl(var(--cream))"
           waveSpeedX={0.02}
