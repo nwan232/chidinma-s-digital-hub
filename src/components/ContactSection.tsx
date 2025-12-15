@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Mail, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Send, Mail, MapPin, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -39,8 +39,6 @@ const ContactSection = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
   ];
 
   return (

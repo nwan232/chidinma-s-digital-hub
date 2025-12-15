@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +50,8 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <Button variant="hero" size="lg" asChild>
             <a href="#contact">Hire Me</a>
           </Button>
@@ -79,11 +81,14 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="hero" size="lg" className="mt-4" asChild>
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Hire Me
-              </a>
-            </Button>
+            <div className="flex items-center justify-between mt-4">
+              <ThemeToggle />
+              <Button variant="hero" size="lg" asChild>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  Hire Me
+                </a>
+              </Button>
+            </div>
           </nav>
         </div>
       )}
