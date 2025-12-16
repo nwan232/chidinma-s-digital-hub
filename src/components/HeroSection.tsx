@@ -1,6 +1,7 @@
 import { ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import chidinmaPortrait from '@/assets/chidinma-portrait.jpg';
+import chidinmaPortrait from '@/assets/picture.jpeg';
+import CV from '@/assets/CV.pdf';
 
 const HeroSection = () => {
   return (
@@ -31,7 +32,7 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <a href="#" download>
+                <a href={CV} download="Chidinma-CV.pdf">
                   <Download size={20} />
                   Download CV
                 </a>
