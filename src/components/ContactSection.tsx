@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '@/lib/emailjs.config';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -25,20 +27,56 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Check if EmailJS is configured
+    if (!emailjsConfig.serviceId || !emailjsConfig.templateId || !emailjsConfig.publicKey) {
+      toast({
+        title: "Configuration Error",
+        description: "Email service is not configured. Please contact the site administrator.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    try {
+      // Initialize EmailJS with public key
+      emailjs.init(emailjsConfig.publicKey);
 
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'chidinmanwankwoala@gmail.com', // Your email address
+        }
+      );
+
+      if (result.status === 200) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Something went wrong. Please try again later or contact me directly at chidinmanwankwoala@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'http://www.linkedin.com/in/chidinma-nwankwoala-747852188', label: 'LinkedIn' },
   ];
 
   return (
@@ -166,6 +204,8 @@ const ContactSection = () => {
                     <a
                       key={link.label}
                       href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all hover:-translate-y-1"
                       aria-label={link.label}
                     >
