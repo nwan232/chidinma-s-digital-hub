@@ -31,7 +31,7 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <a href='/public/CV.pdf' download="Chidinma-Nwankwoala-CV.pdf">
+                <a href='/CV.pdf' download="Chidinma-Nwankwoala-CV.pdf">
                   <Download size={20} />
                   Download CV
                 </a>
