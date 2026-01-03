@@ -27,6 +27,7 @@ interface BentoCardProps {
   cta?: string;
   background?: ReactNode;
   category?: string;
+  isDownload?: boolean;
 }
 
 export const BentoCard = ({
@@ -38,8 +39,21 @@ export const BentoCard = ({
   cta,
   background,
   category,
+  isDownload = false,
 }: BentoCardProps) => {
   const [hovered, setHovered] = useState(false);
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isDownload && href) {
+      e.preventDefault();
+      const link = document.createElement('a');
+      link.href = href;
+      link.download = href.split('/').pop() || 'download';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   return (
     <motion.div
@@ -68,8 +82,9 @@ export const BentoCard = ({
         </div>
         {href && cta && (
           <a
-            href={href}
-            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-4"
+            href={isDownload ? '#' : href}
+            onClick={handleClick}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-4 cursor-pointer"
           >
             {cta}
             <svg
@@ -82,7 +97,7 @@ export const BentoCard = ({
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
+                d={isDownload ? "M12 4v16m8-8H4" : "M9 5l7 7-7 7"}
               />
             </svg>
           </a>
